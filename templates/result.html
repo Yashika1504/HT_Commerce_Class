@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Our Champions - Results{% endblock title %}
+
+{% block body %}
+<!-- Include AOS CSS & JS (Ensure this is in your base.html) -->
+<!--
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+-->
+
+<section id="result" class="py-5 bg-light">
+    <div class="container">
+
+        <h2 class="text-center mb-3 display-3 font-weight-bolder"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            style="color: #1a2a3a; letter-spacing: 2px; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-family: 'Poppins', sans-serif;">
+            <b>🏆 Our Champions: Celebrating Excellence 🏆</b>
+        </h2>
+
+        <p class="text-center mb-5 lead"
+           data-aos="fade-up"
+           data-aos-delay="200"
+           data-aos-duration="1000"
+           style="color: #4a637d; font-size: 1.15rem; line-height: 1.7; max-width: 750px; margin: 0 auto; font-family: 'Open Sans', sans-serif;">
+            Every result tells a story of perseverance, expert guidance, and dreams realized. Witness the remarkable achievements that inspire future success.
+        </p>
+
+        <p class="text-center text-muted mb-4"
+           data-aos="fade-up"
+           data-aos-delay="400"
+           style="font-family: 'Open Sans', sans-serif; font-style: italic;">
+            Explore our comprehensive gallery featuring success stories from <strong>2019 to 2025</strong>!
+        </p>
+
+        <div class="gallery-container row">
+            {% for image, delay in gallery_images %}
+            <div class="gallery-item col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="{{ delay }}">
+                <img src="{% static image %}" alt="Result Image" onclick="openModal(this)" class="img-fluid rounded shadow-sm">
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<section id="join-us" class="py-5 bg-dark text-white" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container text-center">
+        <h3 class="display-4 font-weight-bolder mb-4" style="color: #ffc107; letter-spacing: 1.5px; font-family: 'Poppins', sans-serif;">
+            Ready to Be Our Next Success Story?
+        </h3>
+        <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.8; max-width: 900px; margin: 0 auto; font-family: 'Open Sans', sans-serif;">
+            Our proven methodologies, dedicated faculty, and supportive environment are designed to bring out the champion in you. Don't just dream of success—achieve it with us. Join the ranks of our high achievers and unlock your full potential.
+        </p>
+        <a href={% url "contact" %} class="btn btn-warning btn-lg mt-4 shadow-sm" style="font-size: 1.3rem; padding: 15px 35px; border-radius: 50px; font-weight: bold;">
+            Enroll Now and Start Your Journey!
+        </a>
+        <p class="mt-4" style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem;">
+            Limited seats available for the upcoming batch. Secure your spot today!
+        </p>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="modalImage" alt="Expanded Result Image">
+</div>
+
+{% endblock body %}
