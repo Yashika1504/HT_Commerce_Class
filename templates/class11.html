@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Class 11 Notes{% endblock title %}
+
+{% block body %}
+<section class="py-5" style="background-color: #f4f4f4;">
+  <div class="container">
+
+    <!-- Main Heading -->
+    <div class="bg-white p-5 rounded-4 shadow text-center mb-5" data-aos="fade-down">
+      <h1 class="fw-bold text-dark">📚 Class 11 Commerce Notes</h1>
+      <p class="lead text-muted mt-3 mb-2">
+        Download free, high-quality handwritten notes for Accountancy, Business Studies, and Economics.
+      </p>
+      <p class="text-secondary" style="font-size: 0.95rem;">Updated for 2024 · Based on NCERT · Easy & Clear Explanations</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Accountancy -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <h4 class="fw-bold text-dark text-center mb-3">📘 Accountancy</h4>
+
+          <div class="mb-4">
+            <p class="fw-semibold mb-1">Chapter 1: Introduction to Accounting</p>
+            <p class="text-muted small">Learn the basics of financial accounting.</p>
+            <a href="{% static 'pdf/111.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div>
+
+          <div>
+            <p class="fw-semibold mb-1">Chapter 3: Theory Base of accounting.</p>
+            <p class="text-muted small">Accounting principles, Relevance, and Objectives of Accounting Standards.</p>
+            <a href="{% static 'pdf/113.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div><br>
+
+          <div>
+            <p class="fw-semibold mb-1">Chapter 4 :Bases of Accounting .</p>
+            <p class="text-muted small">Cash Basis of Accounting, Recording of transactions and Accrual Basis of Accounting.</p>
+            <a href="{% static 'pdf/114.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div><br>
+
+          <div>
+            <p class="fw-semibold mb-1">Chapter 6 :Bases of Accounting .</p>
+            <p class="text-muted small">Cash Basis of Accounting, Recording of transactions and Accrual Basis of Accounting.</p>
+            <a href="{% static 'pdf/115.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Studies -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <h4 class="fw-bold text-dark text-center mb-3">📙 Business Studies</h4>
+
+          <div class="mb-4">
+            <p class="fw-semibold mb-1">Chapter 2: Basic terms of Business</p>
+            <p class="text-muted small">Understand business types and objectives.</p>
+            <a href="{% static 'pdf/112.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div>
+
+         <div>
+            <p class="fw-semibold mb-1">Soon!!</p>
+            <p class="text-muted small">FREE NOTES UPLOADED SOONN</p>
+            {% comment %} <a href="{% static 'pdf/y.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a> {% endcomment %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Economics -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <h4 class="fw-bold text-dark text-center mb-3">📗 Economics</h4>
+
+          <div class="mb-4">
+            <p class="fw-semibold mb-1">UPLOADED SOON</p>
+            {% comment %} <p class="text-muted small">Basic concepts of economy and scarcity.</p>
+            <a href="{% static 'pdf/y.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a> {% endcomment %}
+          </div>
+
+          {% comment %} <div>
+            <p class="fw-semibold mb-1">Chapter 2: Central Problems of an Economy</p>
+            <p class="text-muted small">What, how and for whom to produce.</p>
+            <a href="{% static 'pdf/y.pdf' %}" download class="btn btn-dark btn-sm w-100 rounded-pill">⬇️ Download</a>
+          </div> {% endcomment %}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="text-center mt-5" data-aos="fade-up">
+      <div class="bg-white p-4 rounded-4 shadow-sm d-inline-block">
+        <h5 class="fw-bold text-dark mb-2">📝 Test Notes Uploading Soon</h5>
+        <p class="text-muted mb-0">Practice PDFs & Sample Questions will be added soon. Stay tuned!</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock body %}
