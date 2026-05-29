@@ -79,15 +79,8 @@ WSGI_APPLICATION = 'htcom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'HTcommerce',  # Replace with your database name
-        'USER': 'root',  # Replace with your MySQL username
-        'PASSWORD': 'Yashikav@04',  # Replace with your MySQL password
-        'HOST': 'localhost',  # Or your MySQL server address
-        'PORT': '3306',      # Default MySQL port
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
